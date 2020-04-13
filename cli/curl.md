@@ -39,7 +39,8 @@ Using `curl` assumes a certain amount of familiarity with the command line and O
 **Note**: Personally Identifiable Information (PII): When you create buckets or adding objects, ensure to not use any information that can identify any user (natural person) by name, location, or any other means.
 {:tip}
 
-## Request an IAM Token
+## Request an IAM 
+
 {: #curl-iam}
 
 Two ways you can generate an IAM `oauth` token for authenticating requests are using a `curl` command with an API key (described later), or from the command line by using [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_oauth_tokens). 
@@ -50,7 +51,7 @@ Two ways you can generate an IAM `oauth` token for authenticating requests are u
 Ensure that you have an API key. You can get one from [{{site.data.keyword.iamlong}}](https://cloud.ibm.com/iam/apikeys).
 
 ```
-curl -X "POST" "https://iam.cloud.ibm.com/identity/token" \
+curl -X "POST" "https://iam.cloud.ibm.com/oidc/token" \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/x-www-form-urlencoded' \
      --data-urlencode "apikey={api-key}" \
